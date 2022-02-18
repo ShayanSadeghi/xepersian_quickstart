@@ -1,0 +1,78 @@
+
+\documentclass[a4paper,12pt,fullpage]{article}
+
+\usepackage{import}
+\usepackage{graphicx}
+
+
+\usepackage[paperwidth=19cm,paperheight=25.7cm,hmargin=2cm, vmargin=2cm]{geometry}
+\usepackage[a4,frame,center,noinfo]{crop}
+\usepackage{longtable}
+
+\usepackage{array}
+\usepackage{subfiles}
+\usepackage{blindtext}
+\usepackage{booktabs}
+\usepackage{supertabular}
+\usepackage{float}
+\usepackage[section]{placeins}
+
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % for sections
+
+\usepackage{subfig}
+\usepackage{xr}
+\usepackage{multirow}
+
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	citecolor=cyan
+}
+
+\usepackage{amsmath}
+\usepackage[fleqn]{mathtools}
+\usepackage[ruled, vlined]{algorithm2e}
+\usepackage{tablefootnote}
+
+\usepackage[table]{xcolor}
+\usepackage[noadjust]{cite} 
+\usepackage{xepersian}
+\settextfont{B Nazanin}
+\setlatintextfont[Scale=0.85]{Lato}
+
+
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\comment}[1]{}
+\newcommand{\pluseq}{\mathrel{+}=}
+\newcommand{\subeq}{\mathrel{-}=}
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{C}[1]{>{\centering\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\begin{document}
+	\pagenumbering{alph}
+	\subfile{FirstPage.tex} 
+	\pagebreak
+	\tableofcontents
+	\pagebreak
+	\listoftables
+	\pagebreak
+	\listoffigures
+	\pagebreak
+	\pagenumbering{arabic}
+\section{عنوان بخش}
+	
+\pagebreak
+	%---------------------------------------------------------------------------------------------------------------------------------
+\bibliographystyle{ieeetr-fa}
+%\bibliography{mybib}
+\end{document}
